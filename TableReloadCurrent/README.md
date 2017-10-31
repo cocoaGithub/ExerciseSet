@@ -1,5 +1,6 @@
-### 记录tableView cell当前滚动到的位置,下次进入直接跳转到上次浏览到的cell的位置 
+## tableview实现记录位置的解决思路:
 
+### 1. 记录tableView cell当前滚动到的位置,下次进入直接跳转到上次浏览到的cell的位置         
 实现UIScrollViewDelegate，并在拖动结束和滑动结束的代理方法中记录当前停止的位置
 
 ```
@@ -14,7 +15,7 @@
 }
 ```
 
-### 在列表刷新数据后滚动到之前记录的位置
+### 2. 在列表刷新数据后滚动到之前记录的位置
 
 如果在reloadData后需要立即获取tableview的cell、高度，或者需要滚动tableview，那么，直接在reloadData后执行代码是有可能出问题的。
 
